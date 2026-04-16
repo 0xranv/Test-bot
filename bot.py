@@ -10,7 +10,7 @@ GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 groq_client = Groq(api_key=GROQ_API_KEY)
 
 # Gunakan Bybit untuk data real-time tanpa blokir IP
-exchange = ccxt.bybit()
+exchange = ccxt.kucoin()
 
 # Memori diskusi sederhana (disimpan di RAM)
 user_chats = {}
