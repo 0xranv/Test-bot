@@ -10,7 +10,8 @@ GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 groq_client = Groq(api_key=GROQ_API_KEY)
 
 # Inisialisasi Exchange (Gratis, tanpa API Key untuk baca harga)
-exchange = ccxt.binance()
+exchange = exchange = ccxt.gateio() # Atau ccxt.kucoin()
+
 
 def get_realtime_prices(symbol):
     # Mengambil data 15 menit terakhir secara real-time
